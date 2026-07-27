@@ -4,23 +4,25 @@ body {
     color: white;
     font-family: Arial, sans-serif;
 
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
 }
 
 main {
+    width: 100%;
     text-align: center;
 }
 
 h1 {
     font-size: 4rem;
-    margin-bottom: 0.2em;
+    margin: 0;
 }
 
 p {
+    margin-top: 1rem;
     font-size: 1.2rem;
     color: #b0b0b0;
 }
