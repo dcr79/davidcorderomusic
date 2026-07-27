@@ -86,26 +86,26 @@ p {
     display: block;
 }
 
-/* ----------------------------- */
-/* MOBILE                        */
-/* ----------------------------- */
+/* ===================================== */
+/* MOBILE                                */
+/* ===================================== */
 
 @media (max-width: 768px) {
 
     body {
+        min-height: 100dvh;
         align-items: flex-start;
     }
 
     .hero {
-
         flex-direction: column-reverse;
 
         width: 100%;
         max-width: 420px;
 
-        gap: 2.4rem;
+        gap: 2rem;
 
-        padding: 7vh 2rem 2.5rem;
+        padding: 1rem 2rem 2rem;
 
         text-align: center;
     }
@@ -115,12 +115,11 @@ p {
     }
 
     h1 {
-        font-size: 2.55rem;
+        font-size: 2.7rem;
     }
 
     p {
-
-        margin-top: 1.8rem;
+        margin-top: 2rem;
 
         justify-content: center;
 
@@ -138,11 +137,8 @@ p {
     }
 
     .hero-image img {
-
         width: min(320px, 78vw);
-
         max-width: 100%;
-
         height: auto;
     }
 
