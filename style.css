@@ -19,10 +19,6 @@
 }
 
 body {
-    background: #f8f7f4;
-    color: #404040;
-
-    font-family: "Instrument Sans", sans-serif;
 
     min-height: 100vh;
 
@@ -30,35 +26,48 @@ body {
     justify-content: center;
     align-items: center;
 
+    background: #f8f7f4;
+
+    color: #404040;
+
+    font-family: "Instrument Sans", sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+
 }
 
 .hero {
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 3rem;
+    gap: 1.8rem;
 
-    width: min(900px, 90vw);
+    width: min(760px, 90vw);
 
     padding: 2rem;
+
 }
 
 .hero-text {
 
     display: flex;
+
     flex-direction: column;
-    justify-content: center;
+
+    align-items: flex-start;
 
 }
 
 h1 {
 
     font-size: 3.3rem;
+
     font-weight: 400;
 
     line-height: 1;
@@ -73,7 +82,11 @@ p {
 
     margin-top: 2rem;
 
-    font-size: .80rem;
+    display: flex;
+
+    gap: 1.8rem;
+
+    font-size: .78rem;
 
     font-weight: 400;
 
@@ -85,12 +98,18 @@ p {
 
 }
 
+.hero-image {
+
+    transform: translateY(-25px);
+
+}
+
 .hero-image img {
 
-    width: 300px;
-
-    height: auto;
+    width: 260px;
 
     display: block;
+
+    height: auto;
 
 }
