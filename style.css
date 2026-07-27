@@ -1,51 +1,59 @@
 @font-face {
-    font-family: "Halyard";
-    src: url("fonts/HalyardMicro-Book.otf") format("opentype");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Halyard";
-    src: url("fonts/HalyardMicro-Medium.otf") format("opentype");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Halyard";
-    src: url("fonts/HalyardMicro-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background-color: #111;
-    color: white;
-    font-family: "Halyard", sans-serif;
-
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: #fafaf8;
+    color: #404040;
+
+    font-family: "Instrument Sans", sans-serif;
 }
 
 main {
     width: 100%;
+    max-width: 900px;
     text-align: center;
+    padding: 2rem;
 }
 
 h1 {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 700;
+
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
 }
 
 p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    margin-top: 1.5rem;
+
+    font-size: 0.82rem;
     font-weight: 400;
-    color: #b0b0b0;
+
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+
+    color: #8d8d8d;
 }
