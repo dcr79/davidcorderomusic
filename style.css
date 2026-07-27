@@ -1,8 +1,29 @@
+@font-face {
+    font-family: "Halyard";
+    src: url("fonts/HalyardMicro-Book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Halyard";
+    src: url("fonts/HalyardMicro-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Halyard";
+    src: url("fonts/HalyardMicro-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     background-color: #111;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Halyard", sans-serif;
 
     min-height: 100vh;
 
@@ -17,12 +38,14 @@ main {
 }
 
 h1 {
-    font-size: 4rem;
     margin: 0;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 p {
     margin-top: 1rem;
     font-size: 1.2rem;
+    font-weight: 400;
     color: #b0b0b0;
 }
