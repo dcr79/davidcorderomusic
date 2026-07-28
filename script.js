@@ -14,6 +14,52 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const navLinks = [...document.querySelectorAll(".main-nav a")];
     const panels = [...document.querySelectorAll(".panel[id]")];
+    /* ======================================================
+     Mobile Menu
+    ====================================================== */
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+function closeMenu() {
+
+    if (!menuToggle || !mainNav) return;
+
+    mainNav.classList.remove("open");
+
+    menuToggle.textContent = "☰";
+
+    menuToggle.setAttribute("aria-expanded", "false");
+
+}
+
+function toggleMenu() {
+
+    if (!menuToggle || !mainNav) return;
+
+    const isOpen = mainNav.classList.toggle("open");
+
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+}
+
+if (menuToggle) {
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth >= 1024) {
+
+            closeMenu();
+
+        }
+
+    });
+
+}
 
     if (!navLinks.length || !panels.length) return;
 
@@ -67,11 +113,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             scrollToPanel(id);
 
-            history.replaceState(
-                null,
-                "",
-                `#${id}`
-            );
+            closeMenu();
+
+    history.replaceState(
+    null,
+     "",
+     `#${id}`
+        );
 
         });
 

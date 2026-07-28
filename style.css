@@ -501,12 +501,43 @@ a:focus-visible {
 
 }
 
+/* ==========================================================
+   MOBILE MENU
+========================================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    border: 0;
+
+    background: none;
+
+    color: var(--text);
+
+    font: inherit;
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 1100;
+
+}
+
+.menu-toggle:hover {
+
+    color: var(--text);
+
+}
 
 /* ==========================================================
    MOBILE
 ========================================================== */
 
-@media (max-width:768px) {
+@media (max-width:1023px) {
 
     :root {
 
@@ -519,23 +550,65 @@ a:focus-visible {
 
         width: calc(100% - 32px);
 
+        justify-content: flex-end;
+
     }
 
+    .menu-toggle {
+
+        display: block;
+
+    }
 
     .main-nav {
 
-        gap: 18px;
+        position: fixed;
 
-        flex-wrap: wrap;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+
+        background: var(--bg);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 2rem;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            opacity var(--transition),
+            visibility var(--transition);
 
     }
 
+    .main-nav.open {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+    }
 
     .main-nav a {
 
-        font-size: .72rem;
+        font-size: .95rem;
 
-        letter-spacing: .12em;
+        letter-spacing: .18em;
 
     }
 
@@ -600,6 +673,32 @@ a:focus-visible {
 
     }
 
+    .about-layout {
+
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+    }
+
+    .about-photo {
+
+        margin: 0 auto;
+
+    }
+
+    .about-photo img {
+
+        width: min(320px, 100%);
+
+        margin: 0 auto;
+
+    }
+
+    .about-text {
+
+        max-width: 100%;
+
+    }
 
     .content h2 {
 
