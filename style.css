@@ -256,10 +256,9 @@ main {
 
 }
 
-#home {
+.home {
 
     padding-top: 0;
-
     padding-bottom: 0;
 
 }
@@ -312,10 +311,9 @@ main {
    ABOUT
 ========================================================== */
 
-#about {
+.about {
 
     justify-content: center;
-
     align-items: center;
 
 }
@@ -543,7 +541,7 @@ a:focus-visible {
     }
 
 
-    #home.panel {
+    .home.panel {
 
         min-height: 100vh;
 

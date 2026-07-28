@@ -3,7 +3,13 @@
    Official Website
 ========================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+
+    /* ======================================================
+       LOAD SECTIONS
+    ====================================================== */
+
+    await loadSections();
 
     const navLinks = [...document.querySelectorAll(".main-nav a")];
     const panels = [...document.querySelectorAll(".panel[id]")];
@@ -40,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.scrollIntoView({
 
             behavior: "smooth",
-
             block: "start"
 
         });
@@ -61,7 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             scrollToPanel(id);
 
-            history.replaceState(null, "", `#${id}`);
+            history.replaceState(
+                null,
+                "",
+                `#${id}`
+            );
 
         });
 
@@ -90,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, {
 
         root: null,
-
         threshold: 0.55
 
     });
@@ -120,3 +128,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+/* ==========================================================
+   LOAD HTML SECTIONS
+========================================================== */
+
+async function loadSections() {
+
+    const container = document.getElementById("content");
+
+    const sections = [
+
+        "home",
+        "about",
+        "releases",
+        "scoring",
+        "performances",
+        "noray",
+        "contact"
+
+    ];
+
+    for (const section of sections) {
+
+        const response = await fetch(`sections/${section}.html`);
+
+        if (!response.ok) {
+
+            console.error(`Unable to load sections/${section}.html`);
+
+            continue;
+
+        }
+
+        const html = await response.text();
+
+        container.insertAdjacentHTML("beforeend", html);
+
+    }
+
+}
