@@ -207,7 +207,6 @@ main {
 
 }
 
-
 /* ==========================================================
    CONTENT
 ========================================================== */
@@ -252,7 +251,7 @@ main {
 
 .hero {
 
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -263,26 +262,43 @@ main {
 
 }
 
-.hero-content {
+.hero-layout {
 
-    width: min(420px, 100%);
-
+    width: min(1100px, 100%);
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 420px minmax(320px, 460px);
+    gap: 6rem;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-media {
+
+    margin: 0;
 
 }
 
 .hero-image {
 
+    display: block;
     width: 100%;
-
-    margin-bottom: 3.5rem;
+    height: auto;
 
 }
 
+.hero-content {
+
+    max-width: 460px;
+
+}
 
 .hero h1 {
 
-    font-size: clamp(2.4rem, 4vw, 3rem);
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
 
     font-weight: 400;
 
@@ -293,7 +309,6 @@ main {
     margin-bottom: 1rem;
 
 }
-
 
 .hero-subtitle {
 
@@ -548,21 +563,36 @@ a:focus-visible {
     }
 
 
-    .hero-content {
+    .hero-layout {
 
-        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+        text-align: center;
 
     }
 
+    .hero-media {
+
+        order: 1;
+
+    }
+
+    .hero-content {
+
+        order: 2;
+
+        max-width: 100%;
+
+    }
 
     .hero-image {
 
         width: min(320px, 85vw);
 
-        margin: 0 auto 2.5rem;
+        margin: 0 auto;
 
     }
-
 
     .hero h1 {
 
@@ -581,20 +611,6 @@ a:focus-visible {
 
 }
 
-
-/* ==========================================================
-   LARGE DESKTOPS
-========================================================== */
-
-@media (min-width:1400px) {
-
-    .hero-content {
-
-        width: 460px;
-
-    }
-
-}
 
 
 /* ==========================================================
