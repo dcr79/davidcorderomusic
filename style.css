@@ -256,6 +256,13 @@ main {
 
 }
 
+#home {
+
+    padding-top: 0;
+
+    padding-bottom: 0;
+
+}
 
 .hero-content {
 
@@ -264,7 +271,6 @@ main {
     margin: 0 auto;
 
 }
-
 
 .hero-image {
 
