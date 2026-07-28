@@ -556,7 +556,7 @@ a:focus-visible {
 
     .menu-toggle {
 
-        display: none;
+       display: block;
 
     }
 
