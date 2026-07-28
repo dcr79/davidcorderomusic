@@ -5,39 +5,70 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const links = document.querySelectorAll(".main-nav a");
+    const navLinks = [...document.querySelectorAll(".main-nav a")];
+    const panels = [...document.querySelectorAll(".panel[id]")];
 
-    const sections = document.querySelectorAll("main section[id]");
+    if (!navLinks.length || !panels.length) return;
 
+    /* ======================================================
+       Active Navigation
+    ====================================================== */
+
+    function setActive(id) {
+
+        navLinks.forEach(link => {
+
+            link.classList.toggle(
+                "active",
+                link.getAttribute("href") === `#${id}`
+            );
+
+        });
+
+    }
 
     /* ======================================================
        Smooth Scroll
     ====================================================== */
 
-    links.forEach(link => {
+    function scrollToPanel(id) {
 
-        link.addEventListener("click", event => {
+        const panel = document.getElementById(id);
 
-            event.preventDefault();
+        if (!panel) return;
 
-            const id = link.getAttribute("href");
+        panel.scrollIntoView({
 
-            const target = document.querySelector(id);
+            behavior: "smooth",
 
-            if (!target) return;
+            block: "start"
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+        });
+
+    }
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", e => {
+
+            e.preventDefault();
+
+            const id = link
+                .getAttribute("href")
+                .replace("#", "");
+
+            setActive(id);
+
+            scrollToPanel(id);
+
+            history.replaceState(null, "", `#${id}`);
 
         });
 
     });
 
-
     /* ======================================================
-       Active Navigation
+       Observer
     ====================================================== */
 
     const observer = new IntersectionObserver(entries => {
@@ -46,16 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!entry.isIntersecting) return;
 
-            const id = entry.target.getAttribute("id");
+            setActive(entry.target.id);
 
-            links.forEach(link => {
-
-                link.classList.toggle(
-                    "active",
-                    link.getAttribute("href") === `#${id}`
-                );
-
-            });
+            history.replaceState(
+                null,
+                "",
+                `#${entry.target.id}`
+            );
 
         });
 
@@ -63,13 +91,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
         root: null,
 
-        rootMargin: "-35% 0px -55% 0px",
-
-        threshold: 0
+        threshold: 0.55
 
     });
 
+    panels.forEach(panel => observer.observe(panel));
 
-    sections.forEach(section => observer.observe(section));
+    /* ======================================================
+       Initial State
+    ====================================================== */
+
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash && document.getElementById(hash)) {
+
+        setActive(hash);
+
+        setTimeout(() => {
+
+            scrollToPanel(hash);
+
+        }, 100);
+
+    } else {
+
+        setActive(panels[0].id);
+
+    }
 
 });

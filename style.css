@@ -1,6 +1,12 @@
 /* ==========================================================
    DAVID CORDERO
    Official Website
+   Version 2.0
+========================================================== */
+
+
+/* ==========================================================
+   VARIABLES
 ========================================================== */
 
 :root {
@@ -21,17 +27,30 @@
 
 }
 
+
+/* ==========================================================
+   RESET
+========================================================== */
+
 *,
 *::before,
 *::after {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
+
 html {
+
     scroll-behavior: smooth;
+
 }
+
 
 body {
 
@@ -39,7 +58,7 @@ body {
 
     color: var(--text);
 
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Instrument Sans", Helvetica, Arial, sans-serif;
 
     line-height: 1.7;
 
@@ -49,10 +68,15 @@ body {
 
 }
 
+
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
+
 
 img {
 
@@ -64,6 +88,7 @@ img {
 
 }
 
+
 /* ==========================================================
    HEADER
 ========================================================== */
@@ -73,35 +98,29 @@ img {
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
 
     height: var(--header-height);
 
-    background: var(--bg);
+    background: rgba(248, 247, 244, .92);
 
-    display: flex;
-    align-items: center;
+    backdrop-filter: blur(10px);
 
     z-index: 1000;
 
-    transition: background var(--transition);
-
 }
 
-
-/* ==========================================================
-   HEADER CONTAINER
-========================================================== */
 
 .header-container {
 
     width: min(var(--header-width), calc(100% - 80px));
 
-    margin: 0 auto;
-
     height: 100%;
+
+    margin: 0 auto;
 
     display: flex;
 
@@ -128,6 +147,7 @@ img {
 
 }
 
+
 .main-nav a {
 
     position: relative;
@@ -147,12 +167,7 @@ img {
 }
 
 
-.main-nav a:hover {
-
-    color: var(--text);
-
-}
-
+.main-nav a:hover,
 
 .main-nav a.active {
 
@@ -160,9 +175,76 @@ img {
 
 }
 
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
 main {
+
     padding-top: var(--header-height);
+
 }
+
+
+/* ==========================================================
+   PANELS
+========================================================== */
+
+.panel {
+
+    min-height: calc(100vh - var(--header-height));
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 2rem;
+
+    scroll-margin-top: var(--header-height);
+
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content {
+
+    width: min(100%, var(--max-width));
+
+    margin: 0 auto;
+
+}
+
+
+.content h2 {
+
+    font-size: 1.6rem;
+
+    font-weight: 400;
+
+    margin-bottom: 3rem;
+
+}
+
+
+.content p {
+
+    margin-bottom: 1.6rem;
+
+}
+
+
+.content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
 
 /* ==========================================================
    HERO
@@ -170,21 +252,19 @@ main {
 
 .hero {
 
-    min-height: calc(100vh - var(--header-height));
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    text-align: center;
 
 }
+
 
 .hero-content {
 
     width: min(420px, 100%);
-    text-align: center;
+
+    margin: 0 auto;
 
 }
+
 
 .hero-image {
 
@@ -193,6 +273,7 @@ main {
     margin-bottom: 3.5rem;
 
 }
+
 
 .hero h1 {
 
@@ -208,6 +289,7 @@ main {
 
 }
 
+
 .hero-subtitle {
 
     color: var(--muted);
@@ -220,92 +302,249 @@ main {
 
 }
 
-section {
-    padding: 8rem 2rem;
-    scroll-margin-top: 7rem;
+
+/* ==========================================================
+   GENERIC SECTIONS
+========================================================== */
+
+.panel:not(.hero) {
+
+    text-align: left;
+
 }
 
-.content {
-    width: min(100%, var(--max-width));
-    margin: 0 auto;
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.content a {
+
+    color: var(--text);
+
+    text-decoration: underline;
+
+    text-decoration-color: rgba(68, 68, 68, .25);
+
+    text-underline-offset: 3px;
+
+    transition: text-decoration-color var(--transition);
+
 }
 
-.content h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 3rem;
+.content a:hover {
+
+    text-decoration-color: var(--text);
+
 }
+
+
+/* ==========================================================
+   LISTS
+========================================================== */
+
+.content ul,
+.content ol {
+
+    margin: 1.5rem 0 1.5rem 1.25rem;
+
+}
+
+.content li {
+
+    margin-bottom: .6rem;
+
+}
+
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+.content figure {
+
+    margin: 3rem 0;
+
+}
+
+.content figure img {
+
+    width: 100%;
+
+}
+
+.content figcaption {
+
+    margin-top: 1rem;
+
+    color: var(--muted);
+
+    font-size: .78rem;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   SPACING
+========================================================== */
+
+.panel+.panel {
+
+    border-top: 1px solid rgba(0, 0, 0, .04);
+
+}
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection {
+
+    background: rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+a:focus-visible {
+
+    outline: none;
+
+    color: var(--text);
+
+}
+
 
 /* ==========================================================
    MOBILE
 ========================================================== */
 
-
-.mobile-nav {
-    display: none;
-}
-
 @media (max-width:768px) {
 
     :root {
+
         --header-height: 64px;
+
     }
 
-    /* Ocultamos el menú de escritorio */
 
-    .site-header {
-        display: none;
+    .header-container {
+
+        width: calc(100% - 32px);
+
     }
 
-    /* Mostramos el menú móvil */
 
-    .mobile-nav {
-        display: flex;
-        padding-bottom: 2rem;
-    }
+    .main-nav {
 
-    .mobile-nav .main-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
+        gap: 18px;
+
         flex-wrap: wrap;
+
     }
 
-    .mobile-nav .main-nav a {
-        color: var(--muted);
+
+    .main-nav a {
+
         font-size: .72rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: .14em;
-        transition: color var(--transition);
+
+        letter-spacing: .12em;
+
     }
 
-    .mobile-nav .main-nav a:hover,
-    .mobile-nav .main-nav a.active {
-        color: var(--text);
-    }
 
     main {
-        padding-top: 0;
+
+        padding-top: var(--header-height);
+
     }
 
-    .hero {
+
+    .panel {
+
         min-height: auto;
-        padding: 5rem 1.5rem 2.5rem;
+
+        padding: 6rem 1.5rem;
+
     }
+
+
+    #home.panel {
+
+        min-height: 100vh;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
 
     .hero-image {
-        width: min(300px, 85vw);
-        margin-bottom: 2.5rem;
+
+        width: min(320px, 85vw);
+
+        margin: 0 auto 2.5rem;
+
     }
+
 
     .hero h1 {
+
         font-size: 2rem;
+
     }
 
-    section {
-        padding: 6rem 1.5rem;
+
+    .content h2 {
+
+        font-size: 1.45rem;
+
+        margin-bottom: 2rem;
+
     }
 
 }
+
+
+/* ==========================================================
+   LARGE DESKTOPS
+========================================================== */
+
+@media (min-width:1400px) {
+
+    .hero-content {
+
+        width: 460px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   READY FOR JAVASCRIPT
+========================================================== */
+
+/*
+
+La siguiente fase añadirá mediante JavaScript:
+
+- navegación por pantallas completas en escritorio
+- rueda del ratón
+- teclado
+- actualización automática del menú activo
+- animación entre paneles
+- comportamiento clásico de scroll en móvil
+
+No será necesario modificar este CSS para ello.
+
+*/
