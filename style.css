@@ -135,7 +135,9 @@ img {
    NAVIGATION
 ========================================================== */
 
-.main-nav {
+/* ---------- Desktop ---------- */
+
+.desktop-nav {
 
     display: flex;
 
@@ -147,10 +149,7 @@ img {
 
 }
 
-
-.main-nav a {
-
-    position: relative;
+.desktop-nav a {
 
     color: var(--muted);
 
@@ -166,15 +165,90 @@ img {
 
 }
 
-
-.main-nav a:hover,
-
-.main-nav a.active {
+.desktop-nav a:hover,
+.desktop-nav a.active {
 
     color: var(--text);
 
 }
 
+/* ---------- Mobile ---------- */
+
+.menu-toggle {
+
+    display: none;
+
+    border: 0;
+
+    background: none;
+
+    color: var(--text);
+
+    font: inherit;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 1001;
+
+}
+
+.mobile-nav {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: var(--bg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    padding: 7rem 2rem 2rem;
+
+    gap: 2rem;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity var(--transition);
+
+    z-index: 1000;
+
+}
+
+.mobile-nav.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+.mobile-nav a {
+
+    color: var(--text);
+
+    font-size: .95rem;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+}
 
 /* ==========================================================
    MAIN
@@ -501,37 +575,6 @@ a:focus-visible {
 
 }
 
-/* ==========================================================
-   MOBILE MENU
-========================================================== */
-
-.menu-toggle {
-
-    display: none;
-
-    border: 0;
-
-    background: none;
-
-    color: var(--text);
-
-    font: inherit;
-
-    font-size: 1.8rem;
-
-    line-height: 1;
-
-    cursor: pointer;
-
-    z-index: 1100;
-
-}
-
-.menu-toggle:hover {
-
-    color: var(--text);
-
-}
 
 /* ==========================================================
    MOBILE
@@ -550,7 +593,12 @@ a:focus-visible {
 
         width: calc(100% - 32px);
 
-        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    .desktop-nav {
+
+        display: none;
 
     }
 
@@ -560,55 +608,15 @@ a:focus-visible {
 
     }
 
-    .main-nav {
-
-        position: fixed;
-
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1050;
-
-        background: var(--bg);
+    .mobile-nav {
 
         display: flex;
 
-        flex-direction: column;
-
-        justify-content: center;
-
-        align-items: center;
-
-        gap: 2rem;
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        pointer-events: none;
-
-        transition:
-            opacity var(--transition),
-            visibility var(--transition);
-
     }
 
-    .main-nav.open {
+    .site-header {
 
-        opacity: 1;
-
-        visibility: visible;
-
-        pointer-events: auto;
-
-    }
-
-    .main-nav a {
-
-        font-size: .95rem;
-
-        letter-spacing: .18em;
+        backdrop-filter: none;
 
     }
 

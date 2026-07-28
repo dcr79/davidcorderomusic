@@ -1,4 +1,5 @@
 console.log("SCRIPT CARGADO");
+
 /* ==========================================================
    DAVID CORDERO
    Official Website
@@ -12,59 +13,68 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await loadSections();
 
-    const navLinks = [...document.querySelectorAll(".main-nav a")];
+    const navLinks = [
+        ...document.querySelectorAll(".desktop-nav a"),
+        ...document.querySelectorAll(".mobile-nav a")
+    ];
+
     const panels = [...document.querySelectorAll(".panel[id]")];
+
     /* ======================================================
-     Mobile Menu
+       MOBILE MENU
     ====================================================== */
 
     const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
+    const mobileNav = document.querySelector(".mobile-nav");
 
-function closeMenu() {
+    function closeMenu() {
 
-    if (!menuToggle || !mainNav) return;
+        if (!menuToggle || !mobileNav) return;
 
-    mainNav.classList.remove("open");
+        mobileNav.classList.remove("open");
 
-    menuToggle.textContent = "☰";
+        menuToggle.textContent = "☰";
 
-    menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-expanded", "false");
 
-}
+        document.body.style.overflow = "";
 
-function toggleMenu() {
+    }
 
-    if (!menuToggle || !mainNav) return;
+    function toggleMenu() {
 
-    const isOpen = mainNav.classList.toggle("open");
+        if (!menuToggle || !mobileNav) return;
 
-    menuToggle.textContent = isOpen ? "✕" : "☰";
+        const isOpen = mobileNav.classList.toggle("open");
 
-    menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen ? "✕" : "☰";
 
-}
+        menuToggle.setAttribute("aria-expanded", isOpen);
 
-if (menuToggle) {
+        document.body.style.overflow = isOpen ? "hidden" : "";
 
-    menuToggle.addEventListener("click", toggleMenu);
+    }
 
-    window.addEventListener("resize", () => {
+    if (menuToggle) {
 
-        if (window.innerWidth >= 1024) {
+        menuToggle.addEventListener("click", toggleMenu);
 
-            closeMenu();
+        window.addEventListener("resize", () => {
 
-        }
+            if (window.innerWidth >= 1024) {
 
-    });
+                closeMenu();
 
-}
+            }
+
+        });
+
+    }
 
     if (!navLinks.length || !panels.length) return;
 
     /* ======================================================
-       Active Navigation
+       ACTIVE NAVIGATION
     ====================================================== */
 
     function setActive(id) {
@@ -81,7 +91,7 @@ if (menuToggle) {
     }
 
     /* ======================================================
-       Smooth Scroll
+       SMOOTH SCROLL
     ====================================================== */
 
     function scrollToPanel(id) {
@@ -115,18 +125,18 @@ if (menuToggle) {
 
             closeMenu();
 
-    history.replaceState(
-    null,
-     "",
-     `#${id}`
-        );
+            history.replaceState(
+                null,
+                "",
+                `#${id}`
+            );
 
         });
 
     });
 
     /* ======================================================
-       Observer
+       OBSERVER
     ====================================================== */
 
     const observer = new IntersectionObserver(entries => {
@@ -155,7 +165,7 @@ if (menuToggle) {
     panels.forEach(panel => observer.observe(panel));
 
     /* ======================================================
-       Initial State
+       INITIAL STATE
     ====================================================== */
 
     const hash = window.location.hash.replace("#", "");
