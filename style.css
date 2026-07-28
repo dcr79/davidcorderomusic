@@ -1,251 +1,295 @@
+/* ==========================================
+   FONTS
+========================================== */
+
 @font-face {
     font-family: "Instrument Sans";
     src: url("fonts/InstrumentSans-Regular.ttf") format("truetype");
     font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Instrument Sans";
     src: url("fonts/InstrumentSans-Medium.ttf") format("truetype");
     font-weight: 500;
+    font-style: normal;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
-}
+/* ==========================================
+   VARIABLES
+========================================== */
 
-body{
+:root {
 
-    background:#f8f7f4;
-    color:#404040;
+    --background: #f8f7f4;
+    --text: #404040;
+    --muted: #9a9a9a;
 
-    font-family:"Instrument Sans",sans-serif;
-
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    text-rendering:optimizeLegibility;
+    --container-width: 1080px;
+    --text-width: 680px;
 
 }
 
 
+/* ==========================================
+   RESET
+========================================== */
 
-/* ---------------- HERO ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.hero{
+html {
 
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:2rem;
+    scroll-behavior: smooth;
 
 }
 
-.hero-content{
+body {
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    background: var(--background);
+    color: var(--text);
 
-    gap:1.8rem;
+    font-family: "Instrument Sans", sans-serif;
 
-    width:min(760px,90vw);
-
-}
-
-.hero-text{
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-}
-
-h1{
-
-    font-size:3.3rem;
-    font-weight:400;
-    line-height:1;
-
-    letter-spacing:-0.045em;
-
-}
-
-.hero-text p{
-
-    margin-top:2rem;
-
-    display:flex;
-    gap:1.8rem;
-
-    font-size:.78rem;
-
-    text-transform:uppercase;
-    letter-spacing:.18em;
-
-    color:#9a9a9a;
-
-}
-
-.hero-image{
-
-    transform:translateY(-25px);
-
-}
-
-.hero-image img{
-
-    width:260px;
-    display:block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 
 }
 
 
+/* ==========================================
+   GLOBAL
+========================================== */
 
-/* ---------------- SECTIONS ---------------- */
+.container {
 
-.about{
-
-    width:min(760px,90vw);
-
-    margin:0 auto;
-
-    padding:6rem 2rem 8rem;
+    width: min(var(--container-width), 92vw);
+    margin: 0 auto;
 
 }
 
 
+/* ==========================================
+   HEADER
+========================================== */
 
-/* ---------------- TITLES ---------------- */
+.site-header {
 
-.section-title{
+    min-height: 100vh;
 
-    font-size:.74rem;
-
-    text-transform:uppercase;
-
-    letter-spacing:.22em;
-
-    color:#9a9a9a;
-
-    margin-bottom:2.5rem;
+    display: flex;
+    align-items: center;
 
 }
 
 
+/* ==========================================
+   HERO
+========================================== */
 
-/* ---------------- ABOUT ---------------- */
+.hero {
 
-.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    max-width:670px;
-
-}
-
-.about-content p{
-
-    margin-bottom:2rem;
-
-    font-size:1rem;
-
-    line-height:1.95;
-
-    letter-spacing:-0.01em;
-
-    color:#404040;
+    gap: 2rem;
 
 }
 
-.about-content p:last-child{
+.hero-text {
 
-    margin-bottom:0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-text h1 {
+
+    font-size: 3.3rem;
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -.045em;
+
+}
+
+.hero-subtitle {
+
+    display: flex;
+    gap: 1.8rem;
+
+    margin-top: 2rem;
+
+    font-size: .78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    color: var(--muted);
+
+}
+
+.hero-image {
+
+    transform: translateY(-25px);
+
+}
+
+.hero-image img {
+
+    width: 260px;
+
+    display: block;
 
 }
 
 
+/* ==========================================
+   NAVIGATION
+========================================== */
 
-/* ---------------- RESPONSIVE ---------------- */
+.main-nav {
 
-@media (max-width:768px){
+    display: flex;
+    justify-content: center;
 
-.hero{
+    flex-wrap: wrap;
 
-    min-height:auto;
+    gap: 2.5rem;
 
-    padding:4rem 0;
-
-}
-
-.hero-content{
-
-    flex-direction:column-reverse;
-
-    gap:2.8rem;
-
-    text-align:center;
+    margin-top: 4rem;
 
 }
 
-.hero-text{
+.main-nav a {
 
-    align-items:center;
+    text-decoration: none;
 
-}
+    text-transform: uppercase;
 
-h1{
+    font-size: .72rem;
 
-    font-size:2.35rem;
+    letter-spacing: .18em;
 
-}
+    color: var(--muted);
 
-.hero-text p{
-
-    justify-content:center;
-
-    gap:1rem;
-
-    margin-top:1.3rem;
-
-    font-size:.72rem;
-
-    letter-spacing:.16em;
-
-    flex-wrap:wrap;
+    transition: color .25s ease;
 
 }
 
-.hero-image{
+.main-nav a:hover {
 
-    transform:none;
-
-}
-
-.hero-image img{
-
-    width:min(300px,72vw);
+    color: var(--text);
 
 }
 
-.about{
 
-    padding:5rem 2rem 6rem;
+/* ==========================================
+   MAIN
+========================================== */
+
+main {
+
+    width: min(var(--container-width), 92vw);
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+section {
+
+    padding: 7rem 0;
 
 }
 
-.about-content p{
 
-    font-size:.98rem;
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
-    line-height:1.85;
+@media (max-width: 768px) {
 
-}
+    .site-header {
+
+        min-height: auto;
+
+        padding: 4rem 0;
+
+    }
+
+    .hero {
+
+        flex-direction: column-reverse;
+
+        gap: 2.8rem;
+
+        text-align: center;
+
+    }
+
+    .hero-text {
+
+        align-items: center;
+
+    }
+
+    .hero-text h1 {
+
+        font-size: 2.35rem;
+
+    }
+
+    .hero-subtitle {
+
+        justify-content: center;
+
+        gap: 1rem;
+
+        margin-top: 1.3rem;
+
+        flex-wrap: wrap;
+
+        font-size: .72rem;
+
+        letter-spacing: .16em;
+
+    }
+
+    .hero-image {
+
+        transform: none;
+
+    }
+
+    .hero-image img {
+
+        width: min(300px, 72vw);
+
+    }
+
+    .main-nav {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1.4rem;
+
+        margin-top: 3rem;
+
+    }
 
 }
