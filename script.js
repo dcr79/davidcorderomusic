@@ -1,3 +1,4 @@
+console.log("SCRIPT CARGADO");
 /* ==========================================================
    DAVID CORDERO
    Official Website
