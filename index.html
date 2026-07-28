@@ -3,51 +3,28 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>David Cordero</title>
+<title>David Cordero</title>
 
-    <meta
-        name="description"
-        content="Official website of David Cordero, composer and sound artist.">
+<meta name="description" content="Official website of David Cordero, composer and sound artist.">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+    <!-- ======================================================
+         DESKTOP HEADER
+    ======================================================= -->
+
     <header class="site-header">
 
-        <div class="container">
+        <div class="header-container">
 
-            <div class="hero">
-
-                <div class="hero-text">
-
-                    <h1>David Cordero</h1>
-
-                    <p class="hero-subtitle">
-
-                        <span>Composer</span>
-                        <span>Sound Artist</span>
-
-                    </p>
-
-                </div>
-
-                <div class="hero-image">
-
-                    <img
-                        src="images/paula-bonet.jpg"
-                        alt="Artwork by Paula Bonet">
-
-                </div>
-
-            </div>
-
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary navigation">
 
                 <a href="#about">About</a>
 
@@ -68,22 +45,153 @@
     </header>
 
 
-
     <main>
 
-        <section id="about"></section>
+        <!-- ==================================================
+             HERO
+        =================================================== -->
 
-        <section id="releases"></section>
+        <section class="hero">
 
-        <section id="scoring"></section>
+            <div class="hero-content">
 
-        <section id="performances"></section>
+                <img
+                    class="hero-image"
+                    src="images/paula-bonet.jpg"
+                    alt="Artwork by Paula Bonet">
 
-        <section id="noray"></section>
+                <h1>David Cordero</h1>
 
-        <section id="contact"></section>
+                <p class="hero-subtitle">
+                    Composer · Sound Artist
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MOBILE NAVIGATION
+        =================================================== -->
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+
+            <div class="header-container">
+
+                <div class="main-nav">
+
+                    <a href="#about">About</a>
+
+                    <a href="#releases">Selected Releases</a>
+
+                    <a href="#scoring">Scoring</a>
+
+                    <a href="#performances">Performances</a>
+
+                    <a href="#noray">Noray Records</a>
+
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ==================================================
+             ABOUT
+        =================================================== -->
+
+        <section id="about">
+
+            <div class="content">
+
+                <h2>About</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RELEASES
+        =================================================== -->
+
+        <section id="releases">
+
+            <div class="content">
+
+                <h2>Selected Releases</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SCORING
+        =================================================== -->
+
+        <section id="scoring">
+
+            <div class="content">
+
+                <h2>Scoring</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PERFORMANCES
+        =================================================== -->
+
+        <section id="performances">
+
+            <div class="content">
+
+                <h2>Performances</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             NORAY
+        =================================================== -->
+
+        <section id="noray">
+
+            <div class="content">
+
+                <h2>Noray Records</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CONTACT
+        =================================================== -->
+
+        <section id="contact">
+
+            <div class="content">
+
+                <h2>Contact</h2>
+
+            </div>
+
+        </section>
 
     </main>
+
+    <script src="script.js"></script>
 
 </body>
 
