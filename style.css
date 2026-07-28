@@ -308,9 +308,9 @@ main {
 
 #about {
 
-    align-items: flex-start;
+    justify-content: center;
 
-    padding-top: 8rem;
+    align-items: center;
 
 }
 
