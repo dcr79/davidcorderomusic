@@ -716,6 +716,50 @@ a:focus-visible {
 
     }
 
+    /* ---------- Scoring ---------- */
+
+    .scoring-list {
+
+        gap: 2.5rem;
+
+    }
+
+    .scoring-item {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: .35rem;
+
+    }
+
+    .scoring-year {
+
+        font-size: .8rem;
+
+        margin-bottom: .35rem;
+
+    }
+
+    .scoring-title {
+
+        font-size: 1.8rem;
+
+        line-height: 1.2;
+
+    }
+
+    .scoring-format,
+
+    .scoring-credit {
+
+        font-size: .95rem;
+
+    }
+
 }
 
 /* ==========================================================
@@ -748,7 +792,7 @@ a:focus-visible {
 
     flex-direction: column;
 
-    gap: 1.2rem;
+    gap: .9rem;
 
 }
 
@@ -756,11 +800,11 @@ a:focus-visible {
 
     display: grid;
 
-    grid-template-columns: 70px 1fr 140px 180px;
+    grid-template-columns: 70px minmax(260px, 1fr) 140px 200px;
 
     align-items: center;
 
-    column-gap: 2rem;
+    column-gap: 1.25rem;
 
 }
 
