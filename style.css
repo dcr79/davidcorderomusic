@@ -739,6 +739,56 @@ a:focus-visible {
 }
 
 /* ==========================================================
+   SCORING
+========================================================== */
+
+.scoring-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+}
+
+.scoring-item {
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 140px 180px;
+
+    align-items: center;
+
+    column-gap: 2rem;
+
+}
+
+.scoring-year,
+.scoring-format,
+.scoring-credit {
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+}
+
+.scoring-title {
+
+    color: var(--text);
+
+    transition: color var(--transition);
+
+}
+
+.scoring-title:hover {
+
+    color: var(--muted);
+
+}
+
+/* ==========================================================
    BUTTONS
 ========================================================== */
 
