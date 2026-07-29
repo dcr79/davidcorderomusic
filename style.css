@@ -690,33 +690,21 @@ a:focus-visible {
 
     .about-photo {
 
-        margin: 0;
-
-        margin-top: .25rem;
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: flex-start;
+        margin: 0 auto;
 
     }
 
     .about-photo img {
 
-        display: block;
+        width: min(320px, 100%);
 
-        width: 88%;
-
-        height: auto;
+        margin: 0 auto;
 
     }
 
     .about-text {
 
         max-width: 100%;
-
-        padding-top: .25rem;
 
     }
 
@@ -756,6 +744,8 @@ a:focus-visible {
 
     text-transform: uppercase;
 
+    text-decoration: none;
+
     transition:
         background-color var(--transition),
         color var(--transition),
@@ -768,6 +758,13 @@ a:focus-visible {
     background: var(--text);
 
     color: var(--bg);
+
+}
+
+.button,
+.button:hover {
+
+    text-decoration: none;
 
 }
 
