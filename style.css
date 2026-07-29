@@ -748,7 +748,7 @@ a:focus-visible {
 
     flex-direction: column;
 
-    gap: 1.5rem;
+    gap: 1.2rem;
 
 }
 
@@ -770,13 +770,15 @@ a:focus-visible {
 
     color: var(--muted);
 
-    font-size: .9rem;
+    font-size: .85rem;
 
 }
 
 .scoring-title {
 
     color: var(--text);
+
+    text-decoration: none;
 
     transition: color var(--transition);
 
@@ -785,6 +787,8 @@ a:focus-visible {
 .scoring-title:hover {
 
     color: var(--muted);
+
+    text-decoration: none;
 
 }
 
