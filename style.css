@@ -690,21 +690,33 @@ a:focus-visible {
 
     .about-photo {
 
-        margin: 0 auto;
+        margin: 0;
+
+        margin-top: .25rem;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: flex-start;
 
     }
 
     .about-photo img {
 
-        width: min(320px, 100%);
+        display: block;
 
-        margin: 0 auto;
+        width: 88%;
+
+        height: auto;
 
     }
 
     .about-text {
 
         max-width: 100%;
+
+        padding-top: .25rem;
 
     }
 
