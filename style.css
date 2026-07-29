@@ -774,13 +774,31 @@ a:focus-visible {
 
 }
 
-.scoring-title {
+.scoring-title,
+.scoring-title:link,
+.scoring-title:visited {
 
     color: var(--text);
 
     text-decoration: none;
 
-    transition: color var(--transition);
+}
+
+.scoring-title:hover {
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+}
+
+.scoring-title:focus,
+.scoring-title:focus-visible,
+.scoring-title:active {
+
+    text-decoration: none;
+
+    outline: none;
 
 }
 
