@@ -719,6 +719,26 @@ a:focus-visible {
 }
 
 /* ==========================================================
+   NORAY
+========================================================== */
+
+.noray .about-photo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+}
+
+.noray .about-photo img {
+
+    width: 88%;
+
+}
+
+/* ==========================================================
    BUTTONS
 ========================================================== */
 
@@ -744,8 +764,6 @@ a:focus-visible {
 
     text-transform: uppercase;
 
-    text-decoration: none;
-
     transition:
         background-color var(--transition),
         color var(--transition),
@@ -760,14 +778,6 @@ a:focus-visible {
     color: var(--bg);
 
 }
-
-.button,
-.button:hover {
-
-    text-decoration: none;
-
-}
-
 
 /* ==========================================================
    READY FOR JAVASCRIPT
