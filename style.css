@@ -718,6 +718,46 @@ a:focus-visible {
 
 }
 
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 2rem;
+
+    padding: .9rem 2rem;
+
+    border: 1px solid var(--text);
+
+    color: var(--text);
+
+    background: transparent;
+
+    font-size: .78rem;
+
+    font-weight: 400;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+
+}
+
+.button:hover {
+
+    background: var(--text);
+
+    color: var(--bg);
+
+}
 
 
 /* ==========================================================
