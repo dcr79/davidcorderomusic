@@ -728,7 +728,6 @@ a:focus-visible {
 
         gap: .35rem;
 
-        background: red;
     }
 
     .scoring-year,
@@ -736,7 +735,11 @@ a:focus-visible {
     .scoring-format,
     .scoring-credit {
 
-        width: 100%;
+        display: block;
+
+        font-size: .9rem;
+
+        color: var(--muted);
 
     }
 
