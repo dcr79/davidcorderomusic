@@ -677,7 +677,7 @@ a:focus-visible {
 
     .hero h1 {
 
-        font-size: 5rem;
+        font-size: 2rem;
 
     }
 
@@ -728,6 +728,7 @@ a:focus-visible {
 
         gap: .35rem;
 
+        background: red;
     }
 
     .scoring-year,
