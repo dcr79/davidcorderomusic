@@ -877,7 +877,7 @@ a:focus-visible {
 ========================= */
 
 .performances-photo {
-    margin: 0 0 4rem;
+    margin: 0 0 2rem;
 }
 
 .performances-photo img {
@@ -887,9 +887,7 @@ a:focus-visible {
 }
 
 .performances-intro {
-
-    margin: 1.25rem 0 2.5rem;
-
+    margin: 0 0 2.5rem;
 }
 
 .performances-intro p {
