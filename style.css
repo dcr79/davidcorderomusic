@@ -804,6 +804,15 @@ a:focus-visible {
    SCORING
 ========================================================== */
 
+.section-intro {
+    margin: 0 0 2rem;
+}
+
+.section-intro p {
+    max-width: 920px;
+    color: var(--muted);
+}
+
 .scoring-list {
 
     display: flex;
