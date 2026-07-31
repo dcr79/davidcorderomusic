@@ -937,6 +937,12 @@ a:focus-visible {
 
 }
 
+.performance-project {
+
+    font-style: italic;
+
+}
+
 .performance-item:last-child {
 
     margin-bottom: 0;
