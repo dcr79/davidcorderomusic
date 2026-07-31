@@ -950,6 +950,12 @@ a:focus-visible {
 
 }
 
+#performances .content {
+
+    max-width: 920px;
+
+}
+
 
 /* ==========================================================
    BUTTONS
