@@ -980,7 +980,7 @@ a:focus-visible {
 
     .performance-meta::before {
 
-        content: " · ";
+        content: "  ";
 
     }
 
