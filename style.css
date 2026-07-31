@@ -887,15 +887,17 @@ a:focus-visible {
 
 .performances-intro {
 
-    margin: 0 0 3rem;
+    margin: 1.25rem 0 2.5rem;
 
 }
 
 .performances-intro p {
 
-    font-size: .85rem;
-    line-height: 1.6;
-    margin-bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-size: .8rem;
+    line-height: 1.5;
+    text-align: center;
 
 }
 
