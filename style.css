@@ -885,6 +885,68 @@ a:focus-visible {
     height: auto;
 }
 
+.performances-intro {
+
+    margin: 0 0 3rem;
+
+}
+
+.performances-intro p {
+
+    font-size: .85rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+
+}
+
+.performance-year {
+
+    margin: 0 0 2.5rem;
+
+}
+
+.performance-year:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.performance-year h3 {
+
+    margin: 0 0 1rem;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+.performance-item {
+
+    margin-bottom: 1rem;
+
+}
+
+.performance-item:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.performance-event {
+
+    margin: 0;
+
+}
+
+.performance-meta {
+
+    margin: .15rem 0 0;
+
+    color: var(--muted);
+
+}
+
 /* ==========================================================
    BUTTONS
 ========================================================== */
