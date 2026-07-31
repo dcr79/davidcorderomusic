@@ -876,24 +876,35 @@ a:focus-visible {
    PERFORMANCES
 ========================= */
 
+#performances .content {
+
+    max-width: 920px;
+
+}
+
 .performances-photo {
-    margin: 0 0 2rem;
+
+    margin: 0 0 .75rem;
+
 }
 
 .performances-photo img {
+
     display: block;
     width: 100%;
     height: auto;
+
 }
 
 .performances-intro {
+
     margin: 0 0 2.5rem;
+
 }
 
 .performances-intro p {
 
-    width: 100%;
-    margin: 0 auto;
+    margin: 0;
     font-size: .8rem;
     line-height: 1.5;
     text-align: center;
@@ -915,9 +926,7 @@ a:focus-visible {
 .performance-year h3 {
 
     margin: 0 0 1rem;
-
     font-size: 1rem;
-
     font-weight: 600;
 
 }
@@ -943,17 +952,39 @@ a:focus-visible {
 .performance-meta {
 
     margin: .15rem 0 0;
-
     color: var(--muted);
 
 }
 
-#performances .content {
+@media (min-width: 1024px) {
 
-    max-width: 920px;
+    .performance-item {
+
+        margin-bottom: .55rem;
+
+    }
+
+    .performance-event,
+    .performance-meta {
+
+        display: inline;
+
+    }
+
+    .performance-meta {
+
+        margin: 0;
+        color: var(--muted);
+
+    }
+
+    .performance-meta::before {
+
+        content: " · ";
+
+    }
 
 }
-
 
 /* ==========================================================
    BUTTONS
