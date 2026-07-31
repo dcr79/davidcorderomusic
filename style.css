@@ -871,6 +871,20 @@ a:focus-visible {
 
 }
 
+/* =========================
+   PERFORMANCES
+========================= */
+
+.performances-photo {
+    margin: 0 0 4rem;
+}
+
+.performances-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* ==========================================================
    BUTTONS
 ========================================================== */
