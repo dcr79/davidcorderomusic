@@ -1066,9 +1066,15 @@ a:focus-visible {
 
 }
 
+#contact h2 {
+
+    margin: 0 0 1rem;
+
+}
+
 .contact-details {
 
-    margin-top: 2rem;
+    margin-top: 0;
 
 }
 
@@ -1076,7 +1082,7 @@ a:focus-visible {
 
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 
 }
 
@@ -1096,18 +1102,6 @@ a:focus-visible {
     font: inherit;
 
     resize: vertical;
-
-}
-
-#contact h2 {
-
-    margin-bottom: .5rem;
-
-}
-
-#contact .section-intro {
-
-    margin: 0 0 2rem;
 
 }
 
