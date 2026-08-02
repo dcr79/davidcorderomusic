@@ -1099,6 +1099,18 @@ a:focus-visible {
 
 }
 
+#contact h2 {
+
+    margin-bottom: .5rem;
+
+}
+
+#contact .section-intro {
+
+    margin: 0 0 2rem;
+
+}
+
 .contact-form textarea {
 
     min-height: 180px;
