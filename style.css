@@ -1052,6 +1052,20 @@ a:focus-visible {
    CONTACT
 ========================================================== */
 
+.contact-photo {
+
+    margin: 0 0 2rem;
+
+}
+
+.contact-photo img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
 .contact-details {
 
     margin-top: 2rem;

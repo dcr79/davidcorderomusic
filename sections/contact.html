@@ -2,54 +2,46 @@
 
     <div class="content">
 
-        <div class="about-layout">
+        <figure class="contact-photo">
+            <img src="images/contact.jpg" alt="David Cordero">
+        </figure>
 
-            <figure class="about-photo">
-                <img src="images/contact.jpg" alt="David Cordero">
-            </figure>
+        <h2>Contact</h2>
 
-            <div class="about-text">
+        <div class="section-intro">
+            <p>For commissions, collaborations and general enquiries.</p>
+        </div>
 
-                <h2>Contact</h2>
+        <div class="contact-details">
 
-                <div class="section-intro">
-                    <p>For commissions, collaborations and general enquiries.</p>
-                </div>
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/mykrqveg"
+                method="POST">
 
-                <div class="contact-details">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required>
 
-                    <form
-                        class="contact-form"
-                        action="https://formspree.io/f/mykrqveg"
-                        method="POST">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required>
 
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            required>
+                <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows="8"
+                    required></textarea>
 
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            required>
+                <button type="submit">
+                    Send
+                </button>
 
-                        <textarea
-                            name="message"
-                            placeholder="Message"
-                            rows="8"
-                            required></textarea>
-
-                        <button type="submit">
-                            Send
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
+            </form>
 
         </div>
 
