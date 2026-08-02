@@ -1062,13 +1062,14 @@ a:focus-visible {
 
     display: block;
     width: 100%;
-    height: auto;
+    height: 240px;
+    object-fit: cover;
 
 }
 
 #contact h2 {
 
-    margin: 0 0 1rem;
+    margin: 0 0 .75rem;
 
 }
 
