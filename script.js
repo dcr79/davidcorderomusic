@@ -8,10 +8,12 @@ console.log("SCRIPT CARGADO");
 document.addEventListener("DOMContentLoaded", async () => {
 
     /* ======================================================
-       LOAD SECTIONS
+   LOAD SECTIONS
     ====================================================== */
 
-    await loadSections();
+        await loadSections();
+
+    initContactForm();
 
     const navLinks = [
         ...document.querySelectorAll(".desktop-nav a"),
@@ -226,5 +228,59 @@ async function loadSections() {
         container.insertAdjacentHTML("beforeend", html);
 
     }
+
+}
+
+/* ==========================================================
+   CONTACT FORM
+========================================================== */
+
+function initContactForm() {
+
+    const form = document.querySelector(".contact-form");
+
+    if (!form) return;
+
+    const status = form.querySelector(".form-status");
+
+    form.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        status.textContent = "Sending...";
+
+        const formData = new FormData(form);
+
+        try {
+
+            const response = await fetch(form.action, {
+
+                method: form.method,
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+
+            });
+
+            if (response.ok) {
+
+                status.textContent = "✓ Thank you. Your message has been sent successfully.";
+
+                form.reset();
+
+            } else {
+
+                status.textContent = "Something went wrong. Please try again.";
+
+            }
+
+        } catch (error) {
+
+            status.textContent = "Something went wrong. Please try again.";
+
+        }
+
+    });
 
 }

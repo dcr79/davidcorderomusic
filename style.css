@@ -1107,7 +1107,7 @@ a:focus-visible {
 
 .contact-form textarea {
 
-    min-height: 100px;
+    min-height: 60px;
 
 }
 
@@ -1153,6 +1153,18 @@ a:focus-visible {
     background: var(--text);
 
     color: var(--bg);
+
+}
+
+.form-status {
+
+    min-height: 1.2rem;
+
+    margin-top: .3rem;
+
+    color: var(--muted);
+
+    font-size: .9rem;
 
 }
 
