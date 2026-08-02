@@ -1113,7 +1113,7 @@ a:focus-visible {
 
 .contact-form textarea {
 
-    min-height: 180px;
+    min-height: 100px;
 
 }
 
