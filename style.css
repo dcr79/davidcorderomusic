@@ -1168,6 +1168,19 @@ a:focus-visible {
 
 }
 
+.contact-form button:focus {
+
+    outline: none;
+
+}
+
+.contact-form button:focus-visible {
+
+    outline: 1px solid var(--text);
+    outline-offset: 3px;
+
+}
+
 /* ==========================================================
    READY FOR JAVASCRIPT
 ========================================================== */

@@ -265,7 +265,7 @@ function initContactForm() {
 
             if (response.ok) {
 
-                status.textContent = "✓ Thank you. Your message has been sent successfully.";
+                status.textContent = "✓ Thank you. Your message has been received.";
 
                 form.reset();
 
