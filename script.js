@@ -207,6 +207,7 @@ async function loadSections() {
         "scoring",
         "performances",
         "noray",
+        "media",
         "contact"
 
     ];
