@@ -1049,6 +1049,94 @@ a:focus-visible {
 }
 
 /* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact-details {
+
+    margin-top: 2rem;
+
+}
+
+.contact-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+    padding: .4rem 0;
+
+    border: none;
+    border-bottom: 1px solid var(--muted);
+
+    background: transparent;
+
+    color: var(--text);
+
+    font: inherit;
+
+    resize: vertical;
+
+}
+
+.contact-form textarea {
+
+    min-height: 180px;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    outline: none;
+    border-bottom-color: var(--text);
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+    color: var(--muted);
+
+}
+
+.contact-form button {
+
+    align-self: flex-start;
+
+    padding: .65rem 1.4rem;
+
+    border: 1px solid var(--text);
+
+    background: transparent;
+
+    color: var(--text);
+
+    font: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+
+}
+
+.contact-form button:hover {
+
+    background: var(--text);
+
+    color: var(--bg);
+
+}
+
+/* ==========================================================
    READY FOR JAVASCRIPT
 ========================================================== */
 

@@ -18,9 +18,34 @@
 
                 <div class="contact-details">
 
-                    <a href="mailto:hello@davidcorderomusic.com" class="contact-email">
-                        hello@davidcorderomusic.com
-                    </a>
+                    <form
+                        class="contact-form"
+                        action="https://formspree.io/f/mykrqveg"
+                        method="POST">
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            required>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required>
+
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            rows="8"
+                            required></textarea>
+
+                        <button type="submit">
+                            Send
+                        </button>
+
+                    </form>
 
                 </div>
 
