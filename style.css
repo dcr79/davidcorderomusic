@@ -273,7 +273,7 @@ main {
 
     justify-content: center;
 
-    align-items: flex-start;
+    align-items: center;
 
     padding: 2rem;
 
@@ -540,6 +540,13 @@ main {
 
 }
 
+.section-image,
+.performances-photo,
+.contact-photo {
+
+    margin: 0;
+
+}
 
 /* ==========================================================
    SPACING
