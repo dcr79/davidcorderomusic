@@ -283,9 +283,9 @@ main {
 
 .panel-top {
 
-    justify-content: flex-start;
+    align-items: flex-start;
 
-    padding-top: 1rem;
+    padding-top: 0;
 
 }
 
