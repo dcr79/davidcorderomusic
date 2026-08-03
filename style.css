@@ -267,7 +267,7 @@ main {
 
 .panel {
 
-    min-height: calc(100vh - var(--header-height));
+    min-height: auto;
 
     display: flex;
 
