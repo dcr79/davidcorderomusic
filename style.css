@@ -1296,14 +1296,6 @@ a:focus-visible {
 
     }
 
-    .media-icons {
-
-        flex-direction: column;
-
-        gap: 1.5rem;
-
-    }
-
     .media-icons img {
 
         width: 34px;
