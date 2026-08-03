@@ -1197,6 +1197,87 @@ a:focus-visible {
 }
 
 /* ==========================================================
+   MEDIA
+========================================================== */
+
+.media-links {
+
+    margin-top: 3rem;
+
+}
+
+.media-group {
+
+    margin-bottom: 4rem;
+
+}
+
+.media-group:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.media-group h3 {
+
+    margin-bottom: 1.5rem;
+
+    font-size: .78rem;
+
+    font-weight: 500;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+}
+
+.media-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    flex-wrap: wrap;
+
+}
+
+.media-icons a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: opacity var(--transition),
+                transform var(--transition);
+
+}
+
+.media-icons a:hover {
+
+    opacity: .6;
+
+    transform: translateY(-2px);
+
+}
+
+.media-icons img {
+
+    width: 32px;
+
+    height: 32px;
+
+    display: block;
+
+}
+
+/* ==========================================================
    READY FOR JAVASCRIPT
 ========================================================== */
 
