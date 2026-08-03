@@ -1204,11 +1204,13 @@ a:focus-visible {
 
     margin-top: 3rem;
 
+    text-align: center;
+
 }
 
 .media-group {
 
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 
 }
 
@@ -1220,15 +1222,15 @@ a:focus-visible {
 
 .media-group h3 {
 
-    margin-bottom: 1.5rem;
+    margin: 0 0 1rem;
 
     font-size: .78rem;
 
-    font-weight: 500;
-
-    letter-spacing: .14em;
+    font-weight: 400;
 
     text-transform: uppercase;
+
+    letter-spacing: .18em;
 
     color: var(--muted);
 
@@ -1238,11 +1240,13 @@ a:focus-visible {
 
     display: flex;
 
+    justify-content: center;
+
     align-items: center;
 
-    gap: 2rem;
-
     flex-wrap: wrap;
+
+    gap: 2.8rem;
 
 }
 
@@ -1254,14 +1258,17 @@ a:focus-visible {
 
     justify-content: center;
 
-    transition: opacity var(--transition),
-                transform var(--transition);
+    opacity: .9;
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
 
 }
 
 .media-icons a:hover {
 
-    opacity: .6;
+    opacity: 1;
 
     transform: translateY(-2px);
 
@@ -1269,11 +1276,41 @@ a:focus-visible {
 
 .media-icons img {
 
-    width: 32px;
+    width: 38px;
 
-    height: 32px;
+    height: 38px;
 
     display: block;
+
+}
+
+/* ==========================================================
+   MEDIA · MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .media-group {
+
+        margin-bottom: 3rem;
+
+    }
+
+    .media-icons {
+
+        flex-direction: column;
+
+        gap: 1.5rem;
+
+    }
+
+    .media-icons img {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
 
 }
 
