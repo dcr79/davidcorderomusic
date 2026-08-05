@@ -1306,20 +1306,6 @@ a:focus-visible {
 
     color: inherit;
 
-    transition: opacity .35s ease;
-
-}
-
-.releases-grid:hover .release-card {
-
-    opacity: .60;
-
-}
-
-.releases-grid:hover .release-card:hover {
-
-    opacity: 1;
-
 }
 
 .release-card img {
