@@ -819,6 +819,15 @@ a:focus-visible {
    SCORING
 ========================================================== */
 
+.section-intro {
+    margin: 0 0 2rem;
+}
+
+.section-intro p {
+    max-width: 920px;
+    color: var(--muted);
+}
+
 .scoring-list {
 
     display: flex;
@@ -908,6 +917,21 @@ a:focus-visible {
     display: block;
     width: 100%;
     height: auto;
+
+}
+
+.performances-intro {
+
+    margin: 0 0 2rem;
+
+}
+
+.performances-intro p {
+
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.5;
+    text-align: center;
 
 }
 
@@ -1182,6 +1206,44 @@ a:focus-visible {
 
 }
 
+.releases-intro {
+
+    padding-top: 3rem;
+
+    margin-bottom: 3rem;
+
+    text-align: center;
+
+}
+
+.releases-intro p {
+
+    max-width: none;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+}
+
+.releases-intro a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+
+}
+
+.releases-intro a:hover {
+
+    color: var(--muted);
+
+}
+
 .releases-group {
 
     width: 100%;
@@ -1333,44 +1395,6 @@ a:focus-visible {
     font-size: .66rem;
 
     color: rgba(255,255,255,.65);
-
-}
-
-/* ==========================================================
-   SELECTED RELEASES - MOBILE
-========================================================== */
-
-@media (max-width: 768px) {
-
-    .release-info {
-
-        padding: .5rem;
-
-    }
-
-    .release-info h4 {
-
-        font-size: .58rem;
-
-        line-height: 1.2;
-
-        margin-bottom: .1rem;
-
-    }
-
-    .release-info p {
-
-        font-size: .50rem;
-
-    }
-
-    .release-info span {
-
-        font-size: .46rem;
-
-        margin-top: .08rem;
-
-    }
 
 }
 
