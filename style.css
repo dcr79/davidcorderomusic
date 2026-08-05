@@ -1232,6 +1232,8 @@ a:focus-visible {
 
     color: var(--text);
 
+    text-decoration: none;
+
     transition: color var(--transition);
 
 }
@@ -1304,6 +1306,20 @@ a:focus-visible {
 
     color: inherit;
 
+    transition: opacity .35s ease;
+
+}
+
+.releases-grid:hover .release-card {
+
+    opacity: .60;
+
+}
+
+.releases-grid:hover .release-card:hover {
+
+    opacity: 1;
+
 }
 
 .release-card img {
@@ -1344,7 +1360,7 @@ a:focus-visible {
 
     background: linear-gradient(
         to top,
-        rgba(0,0,0,.55),
+        rgba(0,0,0,.45),
         rgba(0,0,0,0)
     );
 
