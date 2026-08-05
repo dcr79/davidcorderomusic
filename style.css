@@ -1514,11 +1514,29 @@ a:focus-visible {
 
     .release-info {
 
-        font-size: 0.65rem;
+        padding: 0.45rem;
 
-        line-height: 1.35;
+    }
 
-        padding: 0.6rem;
+    .release-info h4 {
+
+        font-size: 0.58rem;
+
+        line-height: 1.15;
+
+        margin-bottom: 0.15rem;
+
+    }
+
+    .release-info p {
+
+        font-size: 0.54rem;
+
+    }
+
+    .release-info span {
+
+        font-size: 0.48rem;
 
     }
 
