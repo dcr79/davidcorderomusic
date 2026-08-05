@@ -824,7 +824,11 @@ a:focus-visible {
 }
 
 .section-intro p {
+    margin: 0;
     max-width: 920px;
+    font-size: .8rem;
+    line-height: 1.5;
+    text-align: center;
     color: var(--muted);
 }
 
@@ -1208,9 +1212,9 @@ a:focus-visible {
 
 .releases-intro {
 
-    padding-top: 3rem;
+    padding-top: .75rem;
 
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     text-align: center;
 
@@ -1222,9 +1226,11 @@ a:focus-visible {
 
     margin: 0 auto;
 
-    color: var(--muted);
+    font-size: .8rem;
 
-    line-height: 1.6;
+    line-height: 1.5;
+
+    color: var(--muted);
 
 }
 
